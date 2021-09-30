@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/security"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/security 
+http://www.springframework.org/schema/security/spring-security.xsd">
+
+<http auto-config="true" use-expressions="true">
+<intercept-url pattern="/" access="permitAll" />
+<intercept-url pattern="/crearUsuario" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/crearUsuarioProcesar" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/editarAdministrativo" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/procesarEditarAdministrativo" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/editarCliente" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/procesarEditarCliente" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/editarProfesional" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/procesarEditarProfesional" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/listarUsuarios" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/listarVisitas" access="hasRole('PROFESIONAL')" />
+<intercept-url pattern="/crearVisita" access="hasRole('PROFESIONAL')" />
+<intercept-url pattern="/responderChecklist" access="hasRole('PROFESIONAL')" />
+<intercept-url pattern="/procesarResponderChecklist" access="hasRole('PROFESIONAL')" />
+<intercept-url pattern="/crearCapacitacion" access="hasRole('CLIENTE')" />
+<intercept-url pattern="/crearCapacitacionProcesar" access="hasRole('CLIENTE')" />
+<intercept-url pattern="/listarCapacitaciones" access="hasRole('CLIENTE')" />
+<intercept-url pattern="/crearPagos" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/crearPagosProcesar" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/listarPagos" access="hasRole('ADMINISTRATIVO')" />
+<intercept-url pattern="/contacto" access="permitAll" />
+<intercept-url pattern="/contactoProcesar" access="permitAll" />
+
+	<form-login 
+		login-page="/login"
+		default-target-url="/menuInicio" 
+		authentication-failure-url="/error"
+		       username-parameter="username"
+		       password-parameter="password"/>
+	<csrf disabled="true"/>
+	<logout logout-success-url="/login" />
+	<access-denied-handler error-page="/customAaccessDenied"/>
+</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		<user-service>
+			<user name="Saul" password="{noop}1234" authorities="ROLE_CLIENTE" />
+			<user name="Jorge" password="{noop}5678" authorities="ROLE_ADMINISTRATIVO" />
+			<user name="Anton" password="{noop}asdf" authorities="ROLE_PROFESIONAL" />
+		</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</bean:beans>

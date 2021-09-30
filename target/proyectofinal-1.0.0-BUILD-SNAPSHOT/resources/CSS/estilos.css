@@ -1,0 +1,946 @@
+/* ========================================================= */
+/* ==================== Estilos Comunes ==================== */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #3b3b3b;    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;    
+}
+
+main{
+	margin: 0px 0px 158px 0px;
+}
+/* ===================================================================== */
+/* ==================== tablas ======================================= */
+/* ===================================================================== */
+th{
+	max-width: 600px;
+    text-align: center;
+    font-size: 24px;
+    color: #f78913;
+    padding: 20px 40px;
+}
+
+td{
+	font-size: 16px;
+    padding: 8px 0px 8px 3px;
+    color: #3a6da7;
+}
+
+.contenedor-tabla {
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 0px 158px 0px;
+}
+
+#tabla {
+ 	max-width: 600px;
+    text-align: center;
+    margin: auto;
+    padding: 0px 0px;	
+}
+
+
+/* ===================================================================== */
+/* ==================== Header de Paginas de Inicio ==================== */
+/* ===================================================================== */
+
+header {
+    width: 100%;
+    height: 400px;
+    background: -webkit-linear-gradient(to right, hsla(20, 89%, 58%, 0.63), hsla(44, 98%, 59%, 0.63)), url(../Imagenes/header.jpg);
+    background: linear-gradient(to right, hsla(239, 70%, 60%, 0.89), hsla(27, 79%, 59%, 0.89)), url(../Imagenes/header.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;    
+}
+
+header .textos-header {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ==================== Barra de Navegación ==================== */
+
+nav {
+    padding: 15px 50px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* ==================== Boton Responsive ==================== */
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+header label i {
+    color: #f2f2f2;
+    padding: 10px 0 10px 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav a {
+    font-size: 22px;
+    font-weight: 300;
+    display: block;
+    padding: 15px 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+nav a i {
+    margin-left: 10px;
+    color: #f2f2f2;
+}
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+.efecto::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f2f2f2;
+    transition: .3s;
+}
+
+.efecto:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+/*Textos Header*/
+
+
+
+.textos-header h1 {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.textos-header h2 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ==================== Asesorias ==================== */
+
+.contenedor-asesorias {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.contenedor-nuestras-asesorias {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 60px;
+}
+
+.imagen-asesorias {
+    width: 50%;
+    display: flex;
+}
+
+.nuestras-asesorias .contenido-textos {
+    width: 50%;
+    padding-top: 25px;
+
+}
+.contenido-textos {
+    margin: auto;
+    margin: 120px 50px;
+}
+.titulo-asesorias {
+    font-size: 40px;
+    color: #f78913;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contenido-textos p {
+
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* ==================== Procesos y Servicios ==================== */
+
+.procesos {
+    width: 100%;
+    background: #f2f2f2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contenedor {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.titulo-procesos {
+    color: #f78913;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.procesos-servicios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen-procesos1 {
+    width: 30%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.imagen-procesos1 img {
+    width: 90%;
+}
+
+.imagen-procesos1 h3 {
+    margin: 10px 0;
+}
+
+.imagen-procesos1 p {
+    font-weight: 300;
+    text-align: justify;
+    padding: 0 25px;
+}
+
+.imagen-procesos2 {
+    width: 30%;
+    text-align: center;
+}
+
+.imagen-procesos2 img {
+    width: 90%;
+}
+
+.imagen-procesos2 h3 {
+    margin: 10px 0;
+}
+
+.imagen-procesos2 p {
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.imagen-procesos3 {
+    width: 30%;
+    text-align: center;
+}
+
+.imagen-procesos3 img {
+    width: 90%;
+}
+
+.imagen-procesos3 h3 {
+    margin: 10px 0;
+}
+
+.imagen-procesos3 p {
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* ==================== Footer ==================== */
+
+footer {
+    background: #FDC830;
+    background: -webkit-linear-gradient(to right, hsla(20, 89%, 58%, 0.938), hsla(44, 98%, 59%, 0.63)), url(../Imagenes/footer.jpg);
+    background: linear-gradient(to right, hsla(239, 50%, 44%, 0.945), hsla(221, 84%, 71%, 0.932)), url(../Imagenes/footer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 0 0px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.siguenos h2 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 200;
+    padding: 5px;
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+}
+
+.redes-footer img {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+
+.titulo-final {
+    text-align: center;
+    font-weight: 100;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+    font-size: 16px;
+}
+
+/* ================================================== */
+/* ==================== Contacto ==================== */
+/* ================================================== */
+
+.header-2 {
+    width: 100%;
+    height: 90px;
+    background: -webkit-linear-gradient(to right, hsla(20, 89%, 58%, 0.63), hsla(44, 98%, 59%, 0.63)), url(../Imagenes/header.jpg);
+    background: linear-gradient(to right, hsla(239, 70%, 60%, 0.89), hsla(27, 79%, 59%, 0.89)), url(../Imagenes/header.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+
+/*Barra Navegacion*/
+.header-2 nav {
+    width: 100%;
+    padding: 20px 50px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#btn-menu {
+    display: none;
+}
+
+.header-2 label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.header-2 label i {
+    color: #f2f2f2;
+    padding: 10px 0 10px 10px;
+}
+
+.header-2 nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.header-2 nav a {
+    font-size: 22px;
+    font-weight: 300;
+    display: block;
+    padding: 15px 20px 0 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.header-2 nav a i {
+    margin-left: 10px;
+    color: #f2f2f2;
+}
+
+.header-2 nav ul li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+.efecto::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f2f2f2;
+    transition: .3s;
+}
+
+.efecto:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+/* ==================== Formularios Contacto ==================== */
+
+.contenedor-contacto {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.imagen-contacto {
+    width: 50%;
+    display: flex;
+}
+
+form {
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: center;
+
+}
+
+.titulo-contacto {
+    max-width: 400px;
+    font-size: 40px;
+    color: #f78913;
+}
+
+input {
+
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#mensaje {
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    max-width: 400px;
+    width: 100%;
+    background-color: #3a6da7;
+    color: #f2f2f2;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/* ============================================================ */
+/* ==================== Crear Capacitacion ==================== */
+/* ============================================================ */
+
+.contenedorcrear {
+    max-width: 400px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;    
+}
+
+#titulocrear {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-crearcapacitacion {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#form-capacitacion {
+    
+    background-color: #ecf4ff;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;    
+}
+
+#boton-crearcapacitacion {
+    background: #3a6da7;
+    color: #f2f2f2;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* ============================================================ */
+/* ============================ Login ========================= */
+/* ============================================================ */
+
+.contenedor-login {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+form #login{ 
+    width: 50%;
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;    
+}
+.imagen-login {
+    width: 50%;
+    display: flex;
+}
+
+.titulo-login {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0 8px 0;
+}
+
+form p { 
+    font-size: 20px;
+    max-width: 400px;
+    text-align: justify;
+    padding: 0px 0 25px 0;
+}
+
+
+#label-login {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 0px 0 0px 20px;
+    color: #3a6da7;
+}
+
+
+
+#boton-login {
+    background: 3a6da7;
+    color: #f2f2f2;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* ============================================================ */
+/* ======================== Crear Pagos ======================= */
+/* ============================================================ */
+
+.contenedor-crearpagos {
+    max-width: 400px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;    
+}
+
+#titulo-crearpagos {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-crearpagos {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-crearpagos {
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#input-crearpagos {
+    
+    background-color: #ecf4ff;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;    
+}
+
+#boton-crearpagos {
+    background: #3a6da7;
+    color: #f2f2f2;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+
+
+/* ============================================================ */
+/* ==================== Editar ================================ */
+/* ============================================================ */
+
+.contenedor {
+	
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 0 158px 0;
+    
+}
+
+#formulario {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute; 
+       
+}
+
+#titulo {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input {
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#boton {
+    background: #3a6da7;
+    color: #f2f2f2;
+    text-align: center;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/* ===================================================================== */
+/* ==================== Responsive max-width: 768px ==================== */
+/* ============================= Header ================================ */
+/* ===================================================================== */
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 400px;
+    }
+
+    header label {
+        display: block;
+        height: 50px;
+    }
+
+    .header-2 label {
+        display: block;
+    }
+
+    header label i {
+        color: #f2f2f2;
+        padding: 10px 0 10px 20px;
+    }
+
+    .header-2 label i {
+        color: #f2f2f2;
+        padding: 20px 0 10px 20px;
+    }
+
+    nav {
+        position: absolute;
+        padding: 0;
+        top: 50px;
+        left: 0;
+        justify-content: flex-start;
+        width: 100%;
+        background: -webkit-linear-gradient(to right, hsla(20, 89%, 58%, 0.938), hsla(44, 98%, 59%, 0.959));
+        background: linear-gradient(to right, hsla(239, 70%, 60%, 0.993), hsla(27, 79%, 59%, 0.877));
+        transform: translatex(-100%);
+        transition: all 0.6s;
+    }
+
+    .header-2 nav {
+        position: absolute;
+        padding: 0;
+        top: 50px;
+        left: 0;
+        justify-content: flex-start;
+        width: 100%;
+        background: -webkit-linear-gradient(to right, hsla(20, 89%, 58%, 0.938), hsla(44, 98%, 59%, 0.959));
+        background: linear-gradient(to right, hsla(239, 70%, 60%, 0.993), hsla(27, 79%, 59%, 0.877));
+        transform: translatex(-100%);
+        transition: all 0.6s;
+    }
+
+    .wave-2 {
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .header-2 nav ul {
+        display: block;
+    }
+
+    nav a i {
+        margin-left: 10px;
+        color: #f2f2f2;
+    }
+
+    nav ul li:hover ul {
+        display: none;
+        position: static;
+    }
+
+    #btn-menu:checked~nav {
+        transform: translateX(0%);
+    }
+
+    header .textos-header {
+        display: flex;
+        height: 150px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textos-header h1 {
+        margin-top: 60px;
+        font-size: 25px;
+    }
+
+    .textos-header h2 {
+        font-size: 16px;
+        padding: 20px 60px 0 60px;
+    }
+
+    /* ==================== Asesorias ==================== */
+
+    .contenedor-nuestras-asesorias {
+        display: block;
+        padding: 60px 0 5px 0;
+    }
+
+    .imagen-asesorias {
+        width: 100%;
+    }
+
+    .nuestras-asesorias .contenido-textos {
+        width: 100%;
+        padding-top: 25px;
+    }
+
+    .titulo-asesorias {
+        font-size: 30px;
+        color: #f78913;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenido-textos p {
+        font-size: 18px;
+        padding: 20px 0 50px 0px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /* ==================== Procesos y Servivio ==================== */
+
+    .procesos {
+        background: #f2f2f2;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .titulo-procesos {
+        color: #f78913;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .procesos-servicios {
+        display: block;
+    }
+
+    .imagen-procesos1 {
+        width: 100%;
+        text-align: center;
+        padding-top: 0px;
+    }
+
+    .imagen-procesos1 img {
+        width: 90%;
+    }
+
+    .imagen-procesos1 h3 {
+        margin: 10px 0;
+    }
+
+    .imagen-procesos1 p {
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .imagen-procesos2 {
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .imagen-procesos2 img {
+        width: 90%;
+    }
+
+    .imagen-procesos2 h3 {
+        margin: 10px 0;
+    }
+
+    .imagen-procesos2 p {
+        font-weight: 300;
+        text-align: justify;
+    }
+
+
+    .imagen-procesos3 {
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .imagen-procesos3 img {
+        width: 90%;
+    }
+
+    .imagen-procesos3 h3 {
+        margin: 10px 0;
+    }
+
+    .imagen-procesos3 p {
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /* ==================== Footer ==================== */
+
+    .siguenos h2 {
+    	
+        font-size: 20px;
+        font-weight: 300;
+        padding: 5px;
+    }
+}
